@@ -1,23 +1,843 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fuegos y vinos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fuegos y Vinos | Fuenmayor</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #181616;
+      color: #f5f1eb;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* CABECERA */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(20, 18, 18, 0.95);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-logo {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-logo span {
+      color: #b7222e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #c22a36;
+    }
+
+    /* PORTADA */
+
+    .hero {
+      min-height: 100vh;
+      padding: 130px 25px 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(15,12,12,0.72), rgba(15,12,12,0.9)),
+        url("portada.jpg") center/cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero-logo {
+      width: min(850px, 95%);
+      margin-bottom: 30px;
+      border-radius: 4px;
+    }
+
+    .hero h1 {
+      display: none;
+    }
+
+    .hero-subtitle {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .hero-location {
+      color: #c5bdb5;
+      margin-bottom: 35px;
+      font-size: 17px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 27px;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #a91e2a;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #c72c39;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid white;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #181616;
+    }
+
+    /* SECCIONES */
+
+    section {
+      padding: 90px 25px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title span {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      color: #b62531;
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(34px, 5vw, 52px);
+      font-weight: normal;
+    }
+
+    .section-title p {
+      max-width: 700px;
+      margin: 15px auto 0;
+      color: #bdb5ae;
+    }
+
+    /* NOSOTROS */
+
+    .about {
+      background: #211e1e;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-text h3 {
+      font-family: Georgia, serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: #cec7c0;
+      margin-bottom: 16px;
+    }
+
+    .about-image {
+      min-height: 420px;
+      background:
+        linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
+        url("restaurante.jpg") center/cover no-repeat;
+      border-radius: 6px;
+    }
+
+    /* CARTA */
+
+    .menu-category {
+      margin-bottom: 65px;
+    }
+
+    .menu-category h3 {
+      font-family: Georgia, serif;
+      font-size: 31px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      padding-bottom: 12px;
+      margin-bottom: 18px;
+      color: #e7ded4;
+    }
+
+    .menu-item {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .menu-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .menu-name {
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    .menu-price {
+      color: #d44952;
+      font-weight: bold;
+      white-space: nowrap;
+      font-size: 18px;
+    }
+
+    .menu-description {
+      margin-top: 7px;
+      color: #aaa19a;
+      font-size: 14px;
+      max-width: 760px;
+    }
+
+    .allergens {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #d2cbc4;
+    }
+
+    /* INFANTIL */
+
+    .kids-box {
+      background: #252121;
+      padding: 30px;
+      border-left: 3px solid #aa202b;
+      margin-bottom: 65px;
+    }
+
+    .kids-box h3 {
+      font-family: Georgia, serif;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .kids-price {
+      font-size: 22px;
+      color: #d44952;
+      font-weight: bold;
+      margin-top: 12px;
+    }
+
+    /* GALERÍA */
+
+    .gallery {
+      background: #211e1e;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .gallery-item {
+      min-height: 300px;
+      background: #2d2929;
+      background-position: center;
+      background-size: cover;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    .gallery-1 {
+      background-image: url("foto1.jpg");
+    }
+
+    .gallery-2 {
+      background-image: url("foto2.jpg");
+    }
+
+    .gallery-3 {
+      background-image: url("foto3.jpg");
+    }
+
+    .gallery-4 {
+      background-image: url("foto4.jpg");
+    }
+
+    .gallery-5 {
+      background-image: url("foto5.jpg");
+    }
+
+    .gallery-6 {
+      background-image: url("foto6.jpg");
+    }
+
+    /* CONTACTO */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      text-align: center;
+    }
+
+    .contact-card {
+      padding: 35px 20px;
+      background: #242020;
+      border-radius: 5px;
+    }
+
+    .contact-card h3 {
+      font-family: Georgia, serif;
+      font-size: 23px;
+      margin-bottom: 13px;
+    }
+
+    .contact-card p,
+    .contact-card a {
+      color: #bcb4ad;
+    }
+
+    .contact-card a:hover {
+      color: #d44952;
+    }
+
+    /* MAPA */
+
+    .map {
+      margin-top: 50px;
+      width: 100%;
+      min-height: 400px;
+      border: 0;
+      filter: grayscale(70%);
+    }
+
+    /* PIE */
+
+    footer {
+      padding: 45px 25px;
+      text-align: center;
+      background: #111010;
+      color: #89817b;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: white;
+      font-family: Georgia, serif;
+      font-size: 19px;
+    }
+
+    /* MÓVIL */
+
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        min-height: 300px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+      section {
+        padding: 70px 18px;
+      }
+
+      .hero {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-top {
+        gap: 10px;
+      }
+
+      .menu-name {
+        font-size: 17px;
+      }
+    }
+  </style>
 </head>
+
 
 <body>
 
-    <h1>Fuegos y vinos</h1>
+  <!-- CABECERA -->
 
-    <p>Restaurante en Fuenmayor</p>
+  <header>
+    <nav>
+      <a href="#inicio" class="nav-logo">
+        Fuegos <span>&</span> Vinos
+      </a>
 
-    <h2>Bienvenidos</h2>
+      <ul class="nav-links">
+        <li><a href="#nosotros">Restaurante</a></li>
+        <li><a href="#carta">Carta</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- PORTADA -->
+
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+
+      <img
+        src="logo.jpg"
+        alt="Fuegos y Vinos"
+        class="hero-logo"
+      >
+
+      <h1>Fuegos y Vinos</h1>
+
+      <p class="hero-subtitle">
+        Cocina, fuego y vino en el corazón de La Rioja
+      </p>
+
+      <p class="hero-location">
+        Fuenmayor · La Rioja
+      </p>
+
+      <div class="buttons">
+        <a href="#carta" class="btn btn-primary">
+          Ver la carta
+        </a>
+
+        <a href="#contacto" class="btn btn-secondary">
+          Reservar mesa
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- RESTAURANTE -->
+
+  <section class="about" id="nosotros">
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <p style="color:#b62531; text-transform:uppercase; letter-spacing:3px;">
+            Fuenmayor · La Rioja
+          </p>
+
+          <h3>Fuegos y Vinos</h3>
+
+          <p>
+            Una cocina donde el producto, las brasas y el vino
+            son los protagonistas.
+          </p>
+
+          <p>
+            En Fuegos y Vinos queremos ofrecer una experiencia
+            cercana y sencilla, basada en platos preparados
+            con cuidado y sabores reconocibles.
+          </p>
+
+          <p>
+            Estamos en Fuenmayor, en pleno corazón de La Rioja,
+            una tierra estrechamente ligada a la gastronomía
+            y al vino.
+          </p>
+
+        </div>
+
+        <div class="about-image"></div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CARTA -->
+
+  <section id="carta">
+
+    <div class="container">
+
+      <div class="section-title">
+        <span>Nuestra cocina</span>
+        <h2>La carta</h2>
+        <p>
+          Consulta nuestros platos, precios y principales alérgenos.
+        </p>
+      </div>
+
+
+      <!-- CARNES -->
+
+      <div class="menu-category">
+
+        <h3>Carnes</h3>
+
+        <div class="menu-item">
+          <div class="menu-top">
+            <div class="menu-name">Entrecot a la brasa</div>
+            <div class="menu-price">24,50 €</div>
+          </div>
+
+          <p class="menu-description">
+            Entrecot preparado a la brasa.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- MENÚ INFANTIL -->
+
+      <div class="kids-box">
+
+        <h3>Menú infantil</h3>
+
+        <p>
+          Pechuga empanada con patatas fritas, croquetas de jamón
+          y dos bolas de helado.
+        </p>
+
+        <div class="kids-price">
+          17,00 €
+        </div>
+
+      </div>
+
+
+      <!-- POSTRES -->
+
+      <div class="menu-category">
+
+        <h3>Postres</h3>
+
+
+        <div class="menu-item">
+          <div class="menu-top">
+            <div class="menu-name">
+              Pastel de queso al horno
+            </div>
+
+            <div class="menu-price">
+              8,00 €
+            </div>
+          </div>
+        </div>
+
+
+        <div class="menu-item">
+          <div class="menu-top">
+            <div class="menu-name">
+              Gosúa a nuestra manera
+            </div>
+
+            <div class="menu-price">
+              6,50 €
+            </div>
+          </div>
+        </div>
+
+
+        <div class="menu-item">
+          <div class="menu-top">
+            <div class="menu-name">
+              Torrija caramelizada sobre crema de vainilla
+            </div>
+
+            <div class="menu-price">
+              6,50 €
+            </div>
+          </div>
+        </div>
+
+
+        <div class="menu-item">
+          <div class="menu-top">
+            <div class="menu-name">
+              Sorbete de limón o mojito
+            </div>
+
+            <div class="menu-price">
+              6,00 €
+            </div>
+          </div>
+        </div>
+
+
+        <div class="menu-item">
+          <div class="menu-top">
+            <div class="menu-name">
+              Chocolate 70% sobre teja de almendras y espuma de mojito
+            </div>
+
+            <div class="menu-price">
+              7,00 €
+            </div>
+          </div>
+        </div>
+
+
+        <div class="menu-item">
+          <div class="menu-top">
+            <div class="menu-name">
+              Helados artesanos
+            </div>
+
+            <div class="menu-price">
+              6,50 €
+            </div>
+          </div>
+
+          <p class="menu-description">
+            Tres bolas.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- GALERÍA -->
+
+  <section class="gallery" id="galeria">
+
+    <div class="container">
+
+      <div class="section-title">
+        <span>Fuegos y Vinos</span>
+        <h2>Galería</h2>
+        <p>
+          Nuestro restaurante, nuestros platos y nuestra cocina.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item gallery-1"></div>
+
+        <div class="gallery-item gallery-2"></div>
+
+        <div class="gallery-item gallery-3"></div>
+
+        <div class="gallery-item gallery-4"></div>
+
+        <div class="gallery-item gallery-5"></div>
+
+        <div class="gallery-item gallery-6"></div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACTO -->
+
+  <section id="contacto">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span>Ven a conocernos</span>
+
+        <h2>Contacto</h2>
+
+        <p>
+          Para reservar mesa, contacta directamente con el restaurante.
+        </p>
+
+      </div>
+
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+
+          <h3>Reservas</h3>
+
+          <p>
+            Teléfono:
+          </p>
+
+          <a href="tel:+34XXXXXXXXX">
+            +34 XXX XXX XXX
+          </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+          <h3>Ubicación</h3>
+
+          <p>
+            Fuenmayor
+          </p>
+
+          <p>
+            La Rioja · España
+          </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+          <h3>Redes sociales</h3>
+
+          <p>
+            <a href="#" target="_blank">
+              Instagram
+            </a>
+          </p>
+
+          <p>
+            <a href="#" target="_blank">
+              Facebook
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- MAPA -->
+
+      <iframe
+        class="map"
+        src="https://www.google.com/maps?q=Fuenmayor%20La%20Rioja&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+    </div>
+
+  </section>
+
+
+  <!-- PIE -->
+
+  <footer>
 
     <p>
-        Próximamente podrás descubrir aquí nuestra carta,
-        nuestros platos y nuestro restaurante.
+      <strong>Fuegos y Vinos</strong>
     </p>
+
+    <p>
+      Fuenmayor · La Rioja
+    </p>
+
+    <p style="margin-top:15px;">
+      © 2026 Fuegos y Vinos
+    </p>
+
+  </footer>
 
 </body>
 </html>
