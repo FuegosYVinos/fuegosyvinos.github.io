@@ -5,7 +5,10 @@
 
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
@@ -25,9 +28,11 @@
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -36,18 +41,22 @@
       line-height: 1.6;
     }
 
+
     body.no-scroll {
       overflow: hidden;
     }
 
+
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
+
 
     img {
       max-width: 100%;
     }
+
 
 
     /* =====================================
@@ -65,14 +74,17 @@
 
       z-index: 2000;
 
-      background: rgba(18, 16, 16, 0.94);
+      background:
+        rgba(18, 16, 16, 0.94);
 
-      backdrop-filter: blur(10px);
+      backdrop-filter:
+        blur(10px);
 
       border-bottom:
         1px solid rgba(255,255,255,0.08);
 
     }
+
 
     nav {
 
@@ -84,29 +96,38 @@
 
       display: flex;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
 
-      align-items: center;
+      align-items:
+        center;
 
       gap: 30px;
 
     }
 
+
     .nav-logo {
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia, serif;
 
-      font-size: 24px;
+      font-size:
+        24px;
 
-      font-weight: bold;
+      font-weight:
+        bold;
 
-      white-space: nowrap;
+      white-space:
+        nowrap;
 
     }
+
 
     .nav-logo span {
       color: #bd2633;
     }
+
 
     .nav-links {
 
@@ -120,74 +141,101 @@
 
     }
 
+
     .nav-links a {
 
       font-size: 12px;
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
 
-      letter-spacing: 1px;
+      letter-spacing:
+        1px;
 
-      transition: color 0.3s;
+      transition:
+        color 0.3s;
 
     }
+
 
     .nav-links a:hover {
       color: #d43b47;
     }
 
 
+
     /* =====================================
-       PORTADA CON FOTOS AUTOMÁTICAS
+       PORTADA
     ===================================== */
 
     .hero {
 
-      position: relative;
+      position:
+        relative;
 
-      min-height: 100vh;
+      min-height:
+        100vh;
 
-      overflow: hidden;
+      overflow:
+        hidden;
 
-      display: flex;
+      display:
+        flex;
 
-      justify-content: center;
+      justify-content:
+        center;
 
-      align-items: center;
+      align-items:
+        center;
 
-      text-align: center;
+      text-align:
+        center;
 
-      padding: 120px 25px 70px;
+      padding:
+        120px 25px 70px;
 
-      background: #100e0e;
+      background:
+        #100e0e;
 
     }
+
 
     .hero-slideshow {
 
-      position: absolute;
+      position:
+        absolute;
 
-      inset: 0;
+      inset:
+        0;
 
-      z-index: 0;
+      z-index:
+        0;
 
     }
 
+
     .hero-slide {
 
-      position: absolute;
+      position:
+        absolute;
 
-      inset: 0;
+      inset:
+        0;
 
-      width: 100%;
+      width:
+        100%;
 
-      height: 100%;
+      height:
+        100%;
 
-      object-fit: cover;
+      object-fit:
+        cover;
 
-      opacity: 0;
+      opacity:
+        0;
 
-      transform: scale(1.03);
+      transform:
+        scale(1.03);
 
       transition:
         opacity 1.5s ease,
@@ -195,156 +243,211 @@
 
     }
 
+
     .hero-slide.active {
 
-      opacity: 1;
+      opacity:
+        1;
 
-      transform: scale(1.08);
+      transform:
+        scale(1.08);
 
     }
 
+
     .hero-overlay {
 
-      position: absolute;
+      position:
+        absolute;
 
-      inset: 0;
+      inset:
+        0;
 
-      z-index: 1;
+      z-index:
+        1;
 
       background:
         linear-gradient(
-          rgba(10, 8, 8, 0.55),
-          rgba(10, 8, 8, 0.88)
+          rgba(10,8,8,0.55),
+          rgba(10,8,8,0.88)
         );
 
     }
 
+
     .hero-content {
 
-      position: relative;
+      position:
+        relative;
 
-      z-index: 2;
+      z-index:
+        2;
 
-      width: 100%;
+      width:
+        100%;
 
-      max-width: 950px;
+      max-width:
+        950px;
 
     }
+
 
     .hero-logo {
 
-      display: block;
+      display:
+        block;
 
-      width: min(850px, 96%);
+      width:
+        min(850px, 96%);
 
-      max-height: 330px;
+      max-height:
+        330px;
 
-      object-fit: contain;
+      object-fit:
+        contain;
 
-      margin: 0 auto 20px;
+      margin:
+        0 auto 20px;
 
     }
+
 
     .hero h1 {
 
-      position: absolute;
+      position:
+        absolute;
 
-      left: -9999px;
+      left:
+        -9999px;
 
     }
 
+
     .hero-subtitle {
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia, serif;
 
       font-size:
         clamp(21px, 4vw, 30px);
 
-      margin-bottom: 10px;
+      margin-bottom:
+        10px;
 
     }
+
 
     .hero-location {
 
-      color: #d1c9c2;
+      color:
+        #d1c9c2;
 
-      margin-bottom: 25px;
+      margin-bottom:
+        25px;
 
     }
 
+
     .reservation-note {
 
-      max-width: 650px;
+      max-width:
+        650px;
 
-      margin: 0 auto 30px;
+      margin:
+        0 auto 30px;
 
-      padding: 14px 18px;
+      padding:
+        14px 18px;
 
       border:
         1px solid rgba(255,255,255,0.18);
 
-      border-radius: 5px;
+      border-radius:
+        5px;
 
       background:
         rgba(0,0,0,0.35);
 
     }
 
+
     .buttons {
 
-      display: flex;
+      display:
+        flex;
 
-      justify-content: center;
+      justify-content:
+        center;
 
-      flex-wrap: wrap;
+      flex-wrap:
+        wrap;
 
-      gap: 15px;
+      gap:
+        15px;
 
     }
+
 
     .btn {
 
-      display: inline-block;
+      display:
+        inline-block;
 
-      padding: 14px 27px;
+      padding:
+        14px 27px;
 
-      border-radius: 4px;
+      border-radius:
+        4px;
 
-      font-weight: bold;
+      font-weight:
+        bold;
 
-      transition: 0.3s;
+      transition:
+        0.3s;
 
     }
+
 
     .btn-primary {
 
-      background: #ad1f2c;
+      background:
+        #ad1f2c;
 
-      color: white;
+      color:
+        white;
 
     }
+
 
     .btn-primary:hover {
 
-      background: #cb2d3a;
+      background:
+        #cb2d3a;
 
-      transform: translateY(-2px);
+      transform:
+        translateY(-2px);
 
     }
+
 
     .btn-secondary {
 
-      border: 1px solid white;
+      border:
+        1px solid white;
 
     }
+
 
     .btn-secondary:hover {
 
-      background: white;
+      background:
+        white;
 
-      color: #181616;
+      color:
+        #181616;
 
     }
+
 
 
     /* =====================================
@@ -352,65 +455,89 @@
     ===================================== */
 
     section {
-      padding: 90px 25px;
+      padding:
+        90px 25px;
     }
+
 
     .container {
 
-      max-width: 1100px;
+      max-width:
+        1100px;
 
-      margin: auto;
+      margin:
+        auto;
 
     }
+
 
     .section-dark {
-      background: #211e1e;
+      background:
+        #211e1e;
     }
+
 
     .section-title {
 
-      text-align: center;
+      text-align:
+        center;
 
-      margin-bottom: 55px;
+      margin-bottom:
+        55px;
 
     }
+
 
     .section-title span {
 
-      display: block;
+      display:
+        block;
 
-      margin-bottom: 8px;
+      margin-bottom:
+        8px;
 
-      color: #c52d39;
+      color:
+        #c52d39;
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
 
-      letter-spacing: 4px;
+      letter-spacing:
+        4px;
 
-      font-size: 12px;
+      font-size:
+        12px;
 
     }
 
+
     .section-title h2 {
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia, serif;
 
       font-size:
         clamp(34px, 5vw, 52px);
 
-      font-weight: normal;
+      font-weight:
+        normal;
 
     }
+
 
     .section-title p {
 
-      max-width: 720px;
+      max-width:
+        720px;
 
-      margin: 15px auto 0;
+      margin:
+        15px auto 0;
 
-      color: #bdb5ae;
+      color:
+        #bdb5ae;
 
     }
+
 
 
     /* =====================================
@@ -419,49 +546,65 @@
 
     .about-grid {
 
-      display: grid;
+      display:
+        grid;
 
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns:
+        1fr 1fr;
 
-      gap: 60px;
+      gap:
+        60px;
 
-      align-items: center;
+      align-items:
+        center;
 
     }
+
 
     .about-text h2 {
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia, serif;
 
-      font-size: 40px;
+      font-size:
+        40px;
 
-      margin-bottom: 20px;
+      margin-bottom:
+        20px;
 
     }
+
 
     .about-text p {
 
-      color: #cec7c0;
+      color:
+        #cec7c0;
 
-      margin-bottom: 16px;
+      margin-bottom:
+        16px;
 
     }
+
 
     .about-photo {
 
-      display: block;
+      display:
+        block;
 
-      width: 100%;
+      width:
+        100%;
 
-      min-height: 430px;
+      height:
+        430px;
 
-      height: 430px;
+      object-fit:
+        cover;
 
-      object-fit: cover;
-
-      border-radius: 6px;
+      border-radius:
+        6px;
 
     }
+
 
 
     /* =====================================
@@ -470,124 +613,171 @@
 
     .menu-category {
 
-      margin-bottom: 70px;
+      margin-bottom:
+        70px;
 
     }
 
+
     .menu-category h3 {
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia, serif;
 
-      font-size: 31px;
+      font-size:
+        31px;
 
-      font-weight: normal;
+      font-weight:
+        normal;
 
-      color: #eee5dc;
+      color:
+        #eee5dc;
 
       border-bottom:
         1px solid rgba(255,255,255,0.16);
 
-      padding-bottom: 12px;
+      padding-bottom:
+        12px;
 
-      margin-bottom: 10px;
+      margin-bottom:
+        10px;
 
     }
 
+
     .menu-item {
 
-      padding: 20px 0;
+      padding:
+        20px 0;
 
       border-bottom:
         1px solid rgba(255,255,255,0.08);
 
     }
 
+
     .menu-top {
 
-      display: flex;
+      display:
+        flex;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
 
-      align-items: flex-start;
+      align-items:
+        flex-start;
 
-      gap: 25px;
+      gap:
+        25px;
 
     }
+
 
     .menu-name {
 
-      font-size: 18px;
+      font-size:
+        18px;
 
-      font-weight: bold;
+      font-weight:
+        bold;
 
     }
+
 
     .menu-price {
 
-      font-size: 18px;
+      font-size:
+        18px;
 
-      font-weight: bold;
+      font-weight:
+        bold;
 
-      color: #df4a56;
+      color:
+        #df4a56;
 
-      white-space: nowrap;
+      white-space:
+        nowrap;
 
     }
+
 
     .menu-description {
 
-      margin-top: 7px;
+      margin-top:
+        7px;
 
-      color: #aaa19a;
+      color:
+        #aaa19a;
 
-      font-size: 14px;
+      font-size:
+        14px;
 
-      max-width: 800px;
+      max-width:
+        800px;
 
     }
+
 
     .menu-description:empty {
-      display: none;
+      display:
+        none;
     }
+
 
     .allergens {
 
-      margin-top: 7px;
+      margin-top:
+        7px;
 
-      color: #c5bbb3;
+      color:
+        #c5bbb3;
 
-      font-size: 12px;
+      font-size:
+        12px;
 
-      font-style: italic;
+      font-style:
+        italic;
 
     }
+
 
     .allergens:empty {
-      display: none;
+      display:
+        none;
     }
+
 
     .bread-service {
 
-      margin-top: 30px;
+      margin-top:
+        30px;
 
-      padding: 22px;
+      padding:
+        22px;
 
       border-left:
         3px solid #a91e2a;
 
-      background: #252121;
+      background:
+        #252121;
 
-      display: flex;
+      display:
+        flex;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
 
-      gap: 20px;
+      gap:
+        20px;
 
     }
+
 
     .bread-service strong:last-child {
-      color: #df4a56;
+      color:
+        #df4a56;
     }
+
 
 
     /* =====================================
@@ -596,30 +786,40 @@
 
     .wine-box {
 
-      padding: 35px;
+      padding:
+        35px;
 
-      background: #292424;
+      background:
+        #292424;
 
       border-left:
         3px solid #a91e2a;
 
-      border-radius: 5px;
+      border-radius:
+        5px;
 
     }
+
 
     .wine-box h3 {
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia, serif;
 
-      font-size: 28px;
+      font-size:
+        28px;
 
-      margin-bottom: 10px;
+      margin-bottom:
+        10px;
 
     }
+
 
     .wine-box p {
-      color: #c3bbb4;
+      color:
+        #c3bbb4;
     }
+
 
 
     /* =====================================
@@ -628,82 +828,74 @@
 
     .events-grid {
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         repeat(2, 1fr);
 
-      gap: 25px;
+      gap:
+        25px;
 
     }
+
 
     .event-card {
 
-      padding: 30px;
+      padding:
+        30px;
 
-      background: #292424;
+      background:
+        #292424;
 
-      border-radius: 5px;
+      border-radius:
+        5px;
 
     }
+
 
     .event-date {
 
-      color: #dc4450;
+      color:
+        #dc4450;
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
 
-      font-weight: bold;
+      font-weight:
+        bold;
 
-      font-size: 13px;
+      font-size:
+        13px;
 
-      letter-spacing: 1px;
+      letter-spacing:
+        1px;
 
-      margin-bottom: 8px;
+      margin-bottom:
+        8px;
 
     }
+
 
     .event-card h3 {
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia, serif;
 
-      font-size: 25px;
+      font-size:
+        25px;
 
-      margin-bottom: 10px;
+      margin-bottom:
+        10px;
 
     }
+
 
     .event-card p {
-      color: #bdb4ad;
+      color:
+        #bdb4ad;
     }
 
-    .event-image {
-
-      display: block;
-
-      width: 100%;
-
-      height: 240px;
-
-      object-fit: cover;
-
-      margin-top: 18px;
-
-      border-radius: 5px;
-
-      cursor: pointer;
-
-    }
-
-    .past-title {
-
-      font-family: Georgia, serif;
-
-      font-size: 30px;
-
-      margin: 65px 0 25px;
-
-    }
 
 
     /* =====================================
@@ -712,50 +904,60 @@
 
     .gallery-category-title {
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia, serif;
 
-      font-size: 30px;
+      font-size:
+        30px;
 
-      font-weight: normal;
+      font-weight:
+        normal;
 
       margin:
         55px 0 20px;
 
-      padding-bottom: 10px;
+      padding-bottom:
+        10px;
 
       border-bottom:
         1px solid rgba(255,255,255,0.12);
 
     }
 
-    .gallery-category-title:first-of-type {
-      margin-top: 0;
-    }
 
     .gallery-grid {
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         repeat(3, 1fr);
 
-      gap: 14px;
+      gap:
+        14px;
 
     }
 
+
     .gallery-photo {
 
-      display: block;
+      display:
+        block;
 
-      width: 100%;
+      width:
+        100%;
 
-      height: 280px;
+      height:
+        280px;
 
-      object-fit: cover;
+      object-fit:
+        cover;
 
-      border-radius: 5px;
+      border-radius:
+        5px;
 
-      cursor: pointer;
+      cursor:
+        pointer;
 
       transition:
         transform 0.3s ease,
@@ -763,107 +965,144 @@
 
     }
 
+
     .gallery-photo:hover {
 
-      transform: scale(1.02);
+      transform:
+        scale(1.02);
 
-      opacity: 0.88;
+      opacity:
+        0.88;
 
     }
 
 
+
     /* =====================================
-       FOTO ABIERTA EN GRANDE
+       LIGHTBOX
     ===================================== */
 
     .lightbox {
 
-      display: none;
+      display:
+        none;
 
-      position: fixed;
+      position:
+        fixed;
 
-      inset: 0;
+      inset:
+        0;
 
-      z-index: 10000;
+      z-index:
+        10000;
 
       background:
         rgba(0,0,0,0.94);
 
-      justify-content: center;
+      justify-content:
+        center;
 
-      align-items: center;
+      align-items:
+        center;
 
-      padding: 30px;
+      padding:
+        30px;
 
     }
+
 
     .lightbox.active {
-      display: flex;
+      display:
+        flex;
     }
+
 
     .lightbox-image {
 
-      max-width: 94vw;
+      max-width:
+        94vw;
 
-      max-height: 90vh;
+      max-height:
+        90vh;
 
-      object-fit: contain;
+      object-fit:
+        contain;
 
-      border-radius: 3px;
+      border-radius:
+        3px;
 
     }
+
 
     .lightbox-close {
 
-      position: absolute;
+      position:
+        absolute;
 
-      top: 15px;
+      top:
+        15px;
 
-      right: 30px;
+      right:
+        30px;
 
-      color: white;
+      color:
+        white;
 
-      font-size: 48px;
+      font-size:
+        48px;
 
-      line-height: 1;
+      line-height:
+        1;
 
-      cursor: pointer;
-
-      user-select: none;
+      cursor:
+        pointer;
 
     }
 
+
     .lightbox-arrow {
 
-      position: absolute;
+      position:
+        absolute;
 
-      top: 50%;
+      top:
+        50%;
 
       transform:
         translateY(-50%);
 
-      border: none;
+      border:
+        none;
 
       background:
         rgba(0,0,0,0.35);
 
-      color: white;
+      color:
+        white;
 
-      font-size: 50px;
+      font-size:
+        50px;
 
-      padding: 15px;
+      padding:
+        15px;
 
-      cursor: pointer;
+      cursor:
+        pointer;
 
     }
+
 
     .lightbox-prev {
-      left: 15px;
+      left:
+        15px;
     }
 
+
     .lightbox-next {
-      right: 15px;
+      right:
+        15px;
     }
+
 
 
     /* =====================================
@@ -872,115 +1111,148 @@
 
     .contact-grid {
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         repeat(3, 1fr);
 
-      gap: 25px;
+      gap:
+        25px;
 
     }
+
 
     .contact-card {
 
-      background: #252121;
+      background:
+        #252121;
 
-      padding: 35px 22px;
+      padding:
+        35px 22px;
 
-      border-radius: 5px;
+      border-radius:
+        5px;
 
-      text-align: center;
+      text-align:
+        center;
 
     }
+
 
     .contact-card h3 {
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia, serif;
 
-      font-size: 23px;
+      font-size:
+        23px;
 
-      margin-bottom: 13px;
+      margin-bottom:
+        13px;
 
     }
+
 
     .contact-card p,
     .contact-card a {
-
-      color: #bdb4ad;
-
+      color:
+        #bdb4ad;
     }
 
-    .contact-card a:hover {
-      color: #df4753;
-    }
 
     .hours-box {
 
-      margin-top: 30px;
+      margin-top:
+        30px;
 
-      padding: 30px;
+      padding:
+        30px;
 
-      background: #252121;
+      background:
+        #252121;
 
       border-left:
         3px solid #a91e2a;
 
-      border-radius: 5px;
+      border-radius:
+        5px;
 
     }
+
 
     .hours-box h3 {
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia, serif;
 
-      font-size: 27px;
+      font-size:
+        27px;
 
-      margin-bottom: 15px;
+      margin-bottom:
+        15px;
 
     }
+
 
     .map {
 
-      width: 100%;
+      width:
+        100%;
 
-      min-height: 420px;
+      min-height:
+        420px;
 
-      margin-top: 50px;
+      margin-top:
+        50px;
 
-      border: 0;
+      border:
+        0;
 
-      filter: grayscale(65%);
+      filter:
+        grayscale(65%);
 
     }
 
 
+
     /* =====================================
-       PIE
+       FOOTER
     ===================================== */
 
     footer {
 
-      padding: 45px 25px;
+      padding:
+        45px 25px;
 
-      background: #111010;
+      background:
+        #111010;
 
-      text-align: center;
+      text-align:
+        center;
 
-      color: #8f8780;
+      color:
+        #8f8780;
 
-      font-size: 13px;
+      font-size:
+        13px;
 
     }
+
 
     footer strong {
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia, serif;
 
-      font-size: 20px;
+      font-size:
+        20px;
 
-      color: white;
+      color:
+        white;
 
     }
+
 
 
     /* =====================================
@@ -990,19 +1262,25 @@
     @media (max-width: 900px) {
 
       .nav-links {
-        display: none;
+        display:
+          none;
       }
 
+
       nav {
-        justify-content: center;
+        justify-content:
+          center;
       }
+
 
       .about-grid,
       .events-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
 
       }
+
 
       .gallery-grid {
 
@@ -1011,9 +1289,11 @@
 
       }
 
+
       .contact-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
 
       }
 
@@ -1023,47 +1303,43 @@
     @media (max-width: 520px) {
 
       section {
-        padding: 70px 18px;
+        padding:
+          70px 18px;
       }
 
-      .hero {
-
-        padding-left: 18px;
-
-        padding-right: 18px;
-
-      }
-
-      .hero-logo {
-
-        width: 100%;
-
-      }
 
       .gallery-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
 
       }
+
 
       .gallery-photo {
 
-        height: 300px;
+        height:
+          300px;
 
       }
+
 
       .menu-name,
       .menu-price {
 
-        font-size: 16px;
+        font-size:
+          16px;
 
       }
 
+
       .lightbox-arrow {
 
-        font-size: 35px;
+        font-size:
+          35px;
 
-        padding: 8px;
+        padding:
+          8px;
 
       }
 
@@ -1074,12 +1350,10 @@
 </head>
 
 
+
 <body>
 
 
-<!-- =====================================
-     NAVEGACIÓN
-===================================== -->
 
 <header>
 
@@ -1149,51 +1423,23 @@
 >
 
 
-  <div class="hero-slideshow">
-
-    <img
-      src="portada1.jpg"
-      class="hero-slide"
-      alt=""
-    >
-
-    <img
-      src="portada2.jpg"
-      class="hero-slide"
-      alt=""
-    >
-
-    <img
-      src="portada3.jpg"
-      class="hero-slide"
-      alt=""
-    >
-
-    <img
-      src="portada4.jpg"
-      class="hero-slide"
-      alt=""
-    >
-
-    <img
-      src="portada5.jpg"
-      class="hero-slide"
-      alt=""
-    >
-
-    <img
-      src="portada6.jpg"
-      class="hero-slide"
-      alt=""
-    >
-
+  <div
+    class="hero-slideshow"
+    id="hero-slideshow"
+  >
   </div>
 
 
-  <div class="hero-overlay"></div>
+  <div
+    class="hero-overlay"
+  >
+  </div>
 
 
-  <div class="hero-content">
+  <div
+    class="hero-content"
+  >
+
 
     <img
       src="logo.png"
@@ -1207,25 +1453,35 @@
     </h1>
 
 
-    <p class="hero-subtitle">
-      Cocina, fuego y vino en el corazón de La Rioja
+    <p
+      class="hero-subtitle"
+    >
+      Cocina, fuego y vino
+      en el corazón de La Rioja
     </p>
 
 
-    <p class="hero-location">
-      Avenida de Cenicero 20 · Fuenmayor · La Rioja
+    <p
+      class="hero-location"
+    >
+      Avenida de Cenicero 20
+      · Fuenmayor
+      · La Rioja
     </p>
 
 
-    <div class="reservation-note">
-
-      Recomendamos reservar con antelación
-      para garantizar disponibilidad.
-
+    <div
+      class="reservation-note"
+    >
+      Recomendamos reservar
+      con antelación para
+      garantizar disponibilidad.
     </div>
 
 
-    <div class="buttons">
+    <div
+      class="buttons"
+    >
 
 
       <a
@@ -1246,7 +1502,9 @@
 
     </div>
 
+
   </div>
+
 
 </section>
 
@@ -1261,13 +1519,20 @@
   id="restaurante"
 >
 
-  <div class="container">
+  <div
+    class="container"
+  >
 
 
-    <div class="about-grid">
+    <div
+      class="about-grid"
+    >
 
 
-      <div class="about-text">
+      <div
+        class="about-text"
+      >
+
 
         <p
           style="
@@ -1286,25 +1551,30 @@
 
 
         <p>
-          Una cocina donde el producto,
-          las brasas y el vino son los protagonistas.
+          Una cocina donde
+          el producto,
+          las brasas y el vino
+          son los protagonistas.
         </p>
 
 
         <p>
-          En Fuegos y Vinos queremos ofrecer
-          una experiencia cercana basada
-          en la cocina, el producto
-          y los sabores de nuestra tierra.
+          En Fuegos y Vinos
+          queremos ofrecer
+          una experiencia cercana
+          basada en la cocina,
+          el producto y los sabores
+          de nuestra tierra.
         </p>
 
 
         <p>
-          Nos encontramos en Fuenmayor,
-          en pleno corazón de La Rioja,
-          una tierra estrechamente ligada
-          a la gastronomía y al vino.
+          Nos encontramos
+          en Fuenmayor,
+          en pleno corazón
+          de La Rioja.
         </p>
+
 
       </div>
 
@@ -1312,11 +1582,13 @@
       <img
         src="restaurante1.jpg"
         alt="Restaurante Fuegos y Vinos"
-        class="about-photo optional-image"
+        class="about-photo"
+        onerror="this.style.display='none'"
       >
 
 
     </div>
+
 
   </div>
 
@@ -1328,821 +1600,563 @@
      CARTA
 ===================================== -->
 
-<section id="carta">
+<section
+  id="carta"
+>
 
-<div class="container">
+<div
+  class="container"
+>
 
 
-  <div class="section-title">
+<div
+  class="section-title"
+>
 
-    <span>
-      Nuestra cocina
-    </span>
+  <span>
+    Nuestra cocina
+  </span>
 
-    <h2>
-      La carta
-    </h2>
+  <h2>
+    La carta
+  </h2>
 
-    <p>
-      Descubre nuestra propuesta gastronómica.
-      Pregunta a nuestro personal
-      por información sobre alérgenos.
-    </p>
+  <p>
+    Descubre nuestra propuesta
+    gastronómica.
+    Pregunta a nuestro personal
+    por información sobre alérgenos.
+  </p>
 
+</div>
+
+
+
+<div
+  class="menu-category"
+>
+
+<h3>
+  Entrantes fríos
+</h3>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Jamón ibérico de bellota
+    </div>
+    <div class="menu-price">
+      25 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Ensalada de perdiz escabechada
+    </div>
+    <div class="menu-price">
+      18 €
+    </div>
   </div>
 
+  <p class="menu-description">
+    Mix de ensalada,
+    tomates cherry,
+    cebolla encurtida
+    y emulsión
+    en su propio escabeche.
+  </p>
+</div>
 
 
-  <!-- ENTRANTES FRÍOS -->
-
-  <div class="menu-category">
-
-    <h3>
-      Entrantes fríos
-    </h3>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Jamón ibérico de bellota
-        </div>
-
-        <div class="menu-price">
-          25 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Ensaladilla rusa
+      con mayonesa aireada
     </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Ensalada de perdiz escabechada
-        </div>
-
-        <div class="menu-price">
-          18 €
-        </div>
-
-      </div>
-
-      <p class="menu-description">
-        Mix de ensalada, tomates cherry,
-        cebolla encurtida y emulsión
-        en su propio escabeche.
-      </p>
-
-      <p class="allergens"></p>
-
+    <div class="menu-price">
+      12 €
     </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Ensaladilla rusa con mayonesa aireada
-        </div>
-
-        <div class="menu-price">
-          12 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Tartar de salmón con aguacate
-          y ajo blanco
-        </div>
-
-        <div class="menu-price">
-          18 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Surtido de ibéricos
-          con queso semicurado
-        </div>
-
-        <div class="menu-price">
-          24 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Ensalada de burrata con tomates cherry
-          confitados, rúcula y cebolla encurtida
-        </div>
-
-        <div class="menu-price">
-          16 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
   </div>
+</div>
 
 
-
-  <!-- ENTRANTES CALIENTES -->
-
-  <div class="menu-category">
-
-    <h3>
-      Entrantes calientes
-    </h3>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Croquetas caseras de jamón
-        </div>
-
-        <div class="menu-price">
-          16 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Tartar de salmón
+      con aguacate
+      y ajo blanco
     </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Empanada de carne al estilo argentino
-        </div>
-
-        <div class="menu-price">
-          5 €/ud.
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
+    <div class="menu-price">
+      18 €
     </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Plato de cuchara
-        </div>
-
-        <div class="menu-price">
-          12 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Provolone a la brasa
-        </div>
-
-        <div class="menu-price">
-          14 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Verduras a la brasa con salsa romesco
-        </div>
-
-        <div class="menu-price">
-          17 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Morcilla asada con salsa riojana
-          y pimientos asados
-        </div>
-
-        <div class="menu-price">
-          14 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Mollejas de vacuno a la brasa
-        </div>
-
-        <div class="menu-price">
-          18 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Risotto de hongos y verduras
-        </div>
-
-        <div class="menu-price">
-          14 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Pasta fresca con verduras al wok
-        </div>
-
-        <div class="menu-price">
-          14 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
   </div>
+</div>
 
 
-
-  <!-- PESCADOS -->
-
-  <div class="menu-category">
-
-    <h3>
-      Nuestros pescados
-    </h3>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Merluza al horno con patatas panaderas
-        </div>
-
-        <div class="menu-price">
-          22 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Surtido de ibéricos
+      con queso semicurado
     </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Bacalao confitado a la riojana
-        </div>
-
-        <div class="menu-price">
-          24 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
+    <div class="menu-price">
+      24 €
     </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Rodaballo a la brasa
-          con patatas panaderas
-        </div>
-
-        <div class="menu-price">
-          25 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
   </div>
+</div>
 
 
-
-  <!-- CARNES -->
-
-  <div class="menu-category">
-
-    <h3>
-      Nuestras carnes
-    </h3>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Carrilleras de vacuno
-          guisadas al vino tinto
-        </div>
-
-        <div class="menu-price">
-          17,50 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Ensalada de burrata
+      con tomates cherry confitados,
+      rúcula y cebolla encurtida
     </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Callos con morro y patitas
-        </div>
-
-        <div class="menu-price">
-          16,50 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
+    <div class="menu-price">
+      16 €
     </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Solomillo de vacuno a la brasa
-        </div>
-
-        <div class="menu-price">
-          26 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Chuletillas de cordero lechal
-        </div>
-
-        <div class="menu-price">
-          25 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Cordero asado con patatas panaderas
-        </div>
-
-        <div class="menu-price">
-          22 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Chuleta a la brasa
-        </div>
-
-        <div class="menu-price">
-          55 €/kg
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Entrecot a la brasa
-        </div>
-
-        <div class="menu-price">
-          24,50 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
   </div>
+</div>
+
+
+</div>
 
 
 
-  <!-- MENÚ INFANTIL -->
+<div
+  class="menu-category"
+>
 
-  <div class="menu-category">
-
-    <h3>
-      Menú infantil
-    </h3>
+<h3>
+  Entrantes calientes
+</h3>
 
 
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Pechuga empanada con patatas fritas
-          y croquetas de jamón
-          + dos bolas de helado
-        </div>
-
-        <div class="menu-price">
-          17 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Croquetas caseras de jamón
     </div>
-
+    <div class="menu-price">
+      16 €
+    </div>
   </div>
+</div>
 
 
-
-  <!-- POSTRES -->
-
-  <div class="menu-category">
-
-    <h3>
-      Nuestros postres
-    </h3>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Pastel de queso al horno
-        </div>
-
-        <div class="menu-price">
-          8 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Empanada de carne
+      al estilo argentino
     </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Goxua (a nuestra manera)
-        </div>
-
-        <div class="menu-price">
-          6,50 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
+    <div class="menu-price">
+      5 €/ud.
     </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Torrija caramelizada
-          sobre crema de vainilla
-        </div>
-
-        <div class="menu-price">
-          6,50 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Sorbete de mojito o limón
-        </div>
-
-        <div class="menu-price">
-          6 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Chocolate 70 % sobre teja de almendras
-          y espuma de mojito
-        </div>
-
-        <div class="menu-price">
-          7 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Helados artesanos (tres bolas)
-        </div>
-
-        <div class="menu-price">
-          6,50 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
-
-    <div class="menu-item">
-
-      <div class="menu-top">
-
-        <div class="menu-name">
-          Yogur natural con frutos rojos
-        </div>
-
-        <div class="menu-price">
-          6 €
-        </div>
-
-      </div>
-
-      <p class="menu-description"></p>
-
-      <p class="allergens"></p>
-
-    </div>
-
   </div>
+</div>
 
 
-
-  <div class="bread-service">
-
-    <strong>
-      Servicio de pan
-    </strong>
-
-    <strong>
-      1,60 €
-    </strong>
-
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Plato de cuchara
+    </div>
+    <div class="menu-price">
+      12 €
+    </div>
   </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Provolone a la brasa
+    </div>
+    <div class="menu-price">
+      14 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Verduras a la brasa
+      con salsa romesco
+    </div>
+    <div class="menu-price">
+      17 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Morcilla asada
+      con salsa riojana
+      y pimientos asados
+    </div>
+    <div class="menu-price">
+      14 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Mollejas de vacuno
+      a la brasa
+    </div>
+    <div class="menu-price">
+      18 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Risotto de hongos
+      y verduras
+    </div>
+    <div class="menu-price">
+      14 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Pasta fresca
+      con verduras al wok
+    </div>
+    <div class="menu-price">
+      14 €
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+<div
+  class="menu-category"
+>
+
+<h3>
+  Nuestros pescados
+</h3>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Merluza al horno
+      con patatas panaderas
+    </div>
+    <div class="menu-price">
+      22 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Bacalao confitado
+      a la riojana
+    </div>
+    <div class="menu-price">
+      24 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Rodaballo a la brasa
+      con patatas panaderas
+    </div>
+    <div class="menu-price">
+      25 €
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+<div
+  class="menu-category"
+>
+
+<h3>
+  Nuestras carnes
+</h3>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Carrilleras de vacuno
+      guisadas al vino tinto
+    </div>
+    <div class="menu-price">
+      17,50 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Callos con morro
+      y patitas
+    </div>
+    <div class="menu-price">
+      16,50 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Solomillo de vacuno
+      a la brasa
+    </div>
+    <div class="menu-price">
+      26 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Chuletillas
+      de cordero lechal
+    </div>
+    <div class="menu-price">
+      25 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Cordero asado
+      con patatas panaderas
+    </div>
+    <div class="menu-price">
+      22 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Chuleta a la brasa
+    </div>
+    <div class="menu-price">
+      55 €/kg
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Entrecot a la brasa
+    </div>
+    <div class="menu-price">
+      24,50 €
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+<div
+  class="menu-category"
+>
+
+<h3>
+  Menú infantil
+</h3>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Pechuga empanada
+      con patatas fritas
+      y croquetas de jamón
+      + dos bolas de helado
+    </div>
+    <div class="menu-price">
+      17 €
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+<div
+  class="menu-category"
+>
+
+<h3>
+  Nuestros postres
+</h3>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Pastel de queso al horno
+    </div>
+    <div class="menu-price">
+      8 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Goxua (a nuestra manera)
+    </div>
+    <div class="menu-price">
+      6,50 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Torrija caramelizada
+      sobre crema de vainilla
+    </div>
+    <div class="menu-price">
+      6,50 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Sorbete de mojito
+      o limón
+    </div>
+    <div class="menu-price">
+      6 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Chocolate 70 %
+      sobre teja de almendras
+      y espuma de mojito
+    </div>
+    <div class="menu-price">
+      7 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Helados artesanos
+      (tres bolas)
+    </div>
+    <div class="menu-price">
+      6,50 €
+    </div>
+  </div>
+</div>
+
+
+<div class="menu-item">
+  <div class="menu-top">
+    <div class="menu-name">
+      Yogur natural
+      con frutos rojos
+    </div>
+    <div class="menu-price">
+      6 €
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+<div
+  class="bread-service"
+>
+
+  <strong>
+    Servicio de pan
+  </strong>
+
+  <strong>
+    1,60 €
+  </strong>
+
+</div>
 
 
 </div>
@@ -2160,44 +2174,50 @@
   class="section-dark"
 >
 
-  <div class="container">
+<div
+  class="container"
+>
 
 
-    <div class="section-title">
+<div
+  class="section-title"
+>
 
-      <span>
-        La Rioja en la copa
-      </span>
+  <span>
+    La Rioja en la copa
+  </span>
 
-      <h2>
-        Carta de vinos
-      </h2>
+  <h2>
+    Carta de vinos
+  </h2>
 
-      <p>
-        Una selección de vinos
-        pensada para acompañar nuestra cocina.
-      </p>
+  <p>
+    Una selección de vinos
+    pensada para acompañar
+    nuestra cocina.
+  </p>
 
-    </div>
-
-
-    <div class="wine-box">
-
-      <h3>
-        Nuestra bodega
-      </h3>
-
-      <p>
-        Próximamente podrás consultar aquí
-        nuestra carta de vinos completa,
-        con bodegas, referencias,
-        denominaciones de origen y precios.
-      </p>
-
-    </div>
+</div>
 
 
-  </div>
+<div
+  class="wine-box"
+>
+
+  <h3>
+    Nuestra bodega
+  </h3>
+
+  <p>
+    Próximamente podrás
+    consultar aquí nuestra
+    carta de vinos completa.
+  </p>
+
+</div>
+
+
+</div>
 
 </section>
 
@@ -2207,126 +2227,92 @@
      EVENTOS
 ===================================== -->
 
-<section id="eventos">
+<section
+  id="eventos"
+>
 
-  <div class="container">
-
-
-    <div class="section-title">
-
-      <span>
-        Agenda
-      </span>
-
-      <h2>
-        Eventos
-      </h2>
-
-      <p>
-        Consulta nuestras próximas propuestas
-        y descubre algunos de nuestros
-        eventos anteriores.
-      </p>
-
-    </div>
+<div
+  class="container"
+>
 
 
-    <div class="events-grid">
+<div
+  class="section-title"
+>
+
+  <span>
+    Agenda
+  </span>
+
+  <h2>
+    Eventos
+  </h2>
+
+  <p>
+    Consulta nuestras
+    próximas propuestas
+    y eventos especiales.
+  </p>
+
+</div>
 
 
-      <div class="event-card">
-
-        <p class="event-date">
-          Próximamente
-        </p>
-
-        <h3>
-          Próximo evento
-        </h3>
-
-        <p>
-          Aquí publicaremos cenas especiales,
-          jornadas gastronómicas,
-          catas y otros eventos.
-        </p>
-
-      </div>
+<div
+  class="events-grid"
+>
 
 
-      <div class="event-card">
+<div
+  class="event-card"
+>
 
-        <p class="event-date">
-          Próximamente
-        </p>
+  <p
+    class="event-date"
+  >
+    Próximamente
+  </p>
 
-        <h3>
-          Nuevas experiencias
-        </h3>
+  <h3>
+    Próximo evento
+  </h3>
 
-        <p>
-          Consulta esta sección
-          para conocer las próximas fechas,
-          horarios y condiciones de reserva.
-        </p>
+  <p>
+    Aquí publicaremos
+    cenas especiales,
+    jornadas gastronómicas,
+    catas y otros eventos.
+  </p>
 
-      </div>
-
-
-    </div>
-
-
-    <h3 class="past-title">
-      Eventos pasados
-    </h3>
+</div>
 
 
-    <div class="events-grid">
+<div
+  class="event-card"
+>
+
+  <p
+    class="event-date"
+  >
+    Próximamente
+  </p>
+
+  <h3>
+    Nuevas experiencias
+  </h3>
+
+  <p>
+    Consulta esta sección
+    para conocer
+    las próximas fechas.
+  </p>
+
+</div>
 
 
-      <div class="event-card">
-
-        <h3>
-          Eventos anteriores
-        </h3>
-
-        <p>
-          Aquí iremos guardando fotografías
-          de nuestros eventos.
-        </p>
-
-        <img
-          src="evento1.jpg"
-          alt="Evento en Fuegos y Vinos"
-          class="event-image optional-image gallery-clickable"
-        >
-
-      </div>
+</div>
 
 
-      <div class="event-card">
-
-        <h3>
-          Más experiencias
-        </h3>
-
-        <p>
-          Este espacio crecerá
-          con los próximos eventos.
-        </p>
-
-        <img
-          src="evento2.jpg"
-          alt="Evento en Fuegos y Vinos"
-          class="event-image optional-image gallery-clickable"
-        >
-
-      </div>
-
-
-    </div>
-
-
-  </div>
+</div>
 
 </section>
 
@@ -2341,183 +2327,80 @@
   id="galeria"
 >
 
-  <div class="container">
+<div
+  class="container"
+>
 
 
-    <div class="section-title">
+<div
+  class="section-title"
+>
 
-      <span>
-        Fuegos y Vinos
-      </span>
+  <span>
+    Fuegos y Vinos
+  </span>
 
-      <h2>
-        Galería
-      </h2>
+  <h2>
+    Galería
+  </h2>
 
-      <p>
-        Descubre nuestro restaurante,
-        nuestros platos y nuestros eventos.
-        Pulsa sobre una fotografía
-        para verla en grande.
-      </p>
+  <p>
+    Descubre nuestro restaurante,
+    nuestros platos
+    y nuestros eventos.
+    Pulsa sobre una fotografía
+    para verla en grande.
+  </p>
 
-    </div>
-
-
-
-    <!-- RESTAURANTE -->
-
-    <h3 class="gallery-category-title">
-      El restaurante
-    </h3>
-
-
-    <div class="gallery-grid">
-
-
-      <img
-        src="restaurante1.jpg"
-        alt="Restaurante Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="restaurante2.jpg"
-        alt="Restaurante Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="restaurante3.jpg"
-        alt="Restaurante Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="restaurante4.jpg"
-        alt="Restaurante Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="restaurante5.jpg"
-        alt="Restaurante Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="restaurante6.jpg"
-        alt="Restaurante Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-
-    </div>
+</div>
 
 
 
-    <!-- PLATOS -->
-
-    <h3 class="gallery-category-title">
-      Nuestros platos
-    </h3>
-
-
-    <div class="gallery-grid">
+<h3
+  class="gallery-category-title"
+>
+  El restaurante
+</h3>
 
 
-      <img
-        src="plato1.jpg"
-        alt="Plato de Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="plato2.jpg"
-        alt="Plato de Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="plato3.jpg"
-        alt="Plato de Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="plato4.jpg"
-        alt="Plato de Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="plato5.jpg"
-        alt="Plato de Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="plato6.jpg"
-        alt="Plato de Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-
-    </div>
+<div
+  class="gallery-grid"
+  id="galeria-restaurante"
+>
+</div>
 
 
 
-    <!-- EVENTOS -->
-
-    <h3 class="gallery-category-title">
-      Eventos
-    </h3>
-
-
-    <div class="gallery-grid">
+<h3
+  class="gallery-category-title"
+>
+  Nuestros platos
+</h3>
 
 
-      <img
-        src="evento1.jpg"
-        alt="Evento en Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="evento2.jpg"
-        alt="Evento en Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="evento3.jpg"
-        alt="Evento en Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="evento4.jpg"
-        alt="Evento en Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="evento5.jpg"
-        alt="Evento en Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
-
-      <img
-        src="evento6.jpg"
-        alt="Evento en Fuegos y Vinos"
-        class="gallery-photo optional-image gallery-clickable"
-      >
+<div
+  class="gallery-grid"
+  id="galeria-platos"
+>
+</div>
 
 
-    </div>
+
+<h3
+  class="gallery-category-title"
+>
+  Eventos
+</h3>
 
 
-  </div>
+<div
+  class="gallery-grid"
+  id="galeria-eventos"
+>
+</div>
+
+
+</div>
 
 </section>
 
@@ -2527,187 +2410,179 @@
      CONTACTO
 ===================================== -->
 
-<section id="contacto">
+<section
+  id="contacto"
+>
 
-  <div class="container">
+<div
+  class="container"
+>
 
 
-    <div class="section-title">
+<div
+  class="section-title"
+>
 
-      <span>
-        Ven a conocernos
-      </span>
+  <span>
+    Ven a conocernos
+  </span>
 
-      <h2>
-        Contacto y horarios
-      </h2>
+  <h2>
+    Contacto y horarios
+  </h2>
 
-      <p>
-        Recomendamos reservar con antelación
-        para garantizar disponibilidad.
-      </p>
+  <p>
+    Recomendamos reservar
+    con antelación.
+  </p>
 
-    </div>
+</div>
 
 
 
-    <div class="contact-grid">
+<div
+  class="contact-grid"
+>
 
 
-      <div class="contact-card">
+<div
+  class="contact-card"
+>
 
-        <h3>
-          Reservas
-        </h3>
+  <h3>
+    Reservas
+  </h3>
 
-        <p>
-
-          <a href="tel:+34614125113">
-            614 125 113
-          </a>
-
-        </p>
-
-        <p style="margin-top:10px;">
-          Reserva recomendada
-        </p>
-
-      </div>
-
-
-
-      <div class="contact-card">
-
-        <h3>
-          Dirección
-        </h3>
-
-        <p>
-          Avenida de Cenicero 20
-        </p>
-
-        <p>
-          26360 Fuenmayor
-        </p>
-
-        <p>
-          La Rioja · España
-        </p>
-
-      </div>
-
-
-
-      <div class="contact-card">
-
-        <h3>
-          Contacto
-        </h3>
-
-
-        <p>
-
-          <a
-            href="mailto:asadorfuegosyvinos@gmail.com"
-          >
-            asadorfuegosyvinos@gmail.com
-          </a>
-
-        </p>
-
-
-        <p style="margin-top:12px;">
-
-          <a
-            href="https://www.instagram.com/fuego_syvinos/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram @fuego_syvinos
-          </a>
-
-        </p>
-
-
-      </div>
-
-
-    </div>
-
-
-
-    <div class="hours-box">
-
-
-      <h3>
-        Horarios
-      </h3>
-
-
-      <p>
-
-        <strong>
-          Martes a domingo:
-        </strong>
-
-        13:30 – 15:30
-
-      </p>
-
-
-      <p>
-
-        <strong>
-          Sábados por la noche:
-        </strong>
-
-        20:30 – 22:00
-
-      </p>
-
-
-      <p
-        style="
-          margin-top:12px;
-          color:#bdb5ae;
-        "
-      >
-        Lunes cerrado.
-      </p>
-
-
-    </div>
-
-
-
-    <iframe
-      class="map"
-      src="https://www.google.com/maps?q=Avenida%20de%20Cenicero%2020%2C%2026360%20Fuenmayor%2C%20La%20Rioja%2C%20Espa%C3%B1a&output=embed"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Ubicación de Fuegos y Vinos"
+  <p>
+    <a
+      href="tel:+34614125113"
     >
-    </iframe>
+      614 125 113
+    </a>
+  </p>
+
+</div>
 
 
-  </div>
+
+<div
+  class="contact-card"
+>
+
+  <h3>
+    Dirección
+  </h3>
+
+  <p>
+    Avenida de Cenicero 20
+  </p>
+
+  <p>
+    26360 Fuenmayor
+  </p>
+
+  <p>
+    La Rioja · España
+  </p>
+
+</div>
+
+
+
+<div
+  class="contact-card"
+>
+
+  <h3>
+    Contacto
+  </h3>
+
+  <p>
+    <a
+      href="mailto:asadorfuegosyvinos@gmail.com"
+    >
+      asadorfuegosyvinos@gmail.com
+    </a>
+  </p>
+
+  <p
+    style="margin-top:12px;"
+  >
+    <a
+      href="https://www.instagram.com/fuego_syvinos/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Instagram @fuego_syvinos
+    </a>
+  </p>
+
+</div>
+
+
+</div>
+
+
+
+<div
+  class="hours-box"
+>
+
+  <h3>
+    Horarios
+  </h3>
+
+  <p>
+    <strong>
+      Martes a domingo:
+    </strong>
+
+    13:30 – 15:30
+  </p>
+
+  <p>
+    <strong>
+      Sábado noche:
+    </strong>
+
+    20:30 – 22:00
+  </p>
+
+  <p
+    style="
+      margin-top:12px;
+      color:#bdb5ae;
+    "
+  >
+    Lunes cerrado.
+  </p>
+
+</div>
+
+
+
+<iframe
+  class="map"
+  src="https://www.google.com/maps?q=Avenida%20de%20Cenicero%2020%2C%2026360%20Fuenmayor%2C%20La%20Rioja%2C%20Espa%C3%B1a&output=embed"
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+  title="Ubicación de Fuegos y Vinos"
+>
+</iframe>
+
+
+</div>
 
 </section>
 
 
 
-<!-- =====================================
-     PIE DE PÁGINA
-===================================== -->
-
 <footer>
 
   <p>
-
     <strong>
       Fuegos y Vinos
     </strong>
-
   </p>
 
   <p>
@@ -2716,7 +2591,9 @@
     · La Rioja
   </p>
 
-  <p style="margin-top:15px;">
+  <p
+    style="margin-top:15px;"
+  >
     © 2026 Fuegos y Vinos
   </p>
 
@@ -2734,398 +2611,689 @@
 >
 
 
-  <span
-    class="lightbox-close"
-    id="lightbox-close"
-  >
-    ×
-  </span>
+<span
+  class="lightbox-close"
+  id="lightbox-close"
+>
+  ×
+</span>
 
 
-  <button
-    class="lightbox-arrow lightbox-prev"
-    id="lightbox-prev"
-    aria-label="Foto anterior"
-  >
-    ‹
-  </button>
+<button
+  class="lightbox-arrow lightbox-prev"
+  id="lightbox-prev"
+  aria-label="Foto anterior"
+>
+  ‹
+</button>
 
 
-  <img
-    id="lightbox-image"
-    class="lightbox-image"
-    src=""
-    alt=""
-  >
+<img
+  id="lightbox-image"
+  class="lightbox-image"
+  src=""
+  alt=""
+>
 
 
-  <button
-    class="lightbox-arrow lightbox-next"
-    id="lightbox-next"
-    aria-label="Foto siguiente"
-  >
-    ›
-  </button>
+<button
+  class="lightbox-arrow lightbox-next"
+  id="lightbox-next"
+  aria-label="Foto siguiente"
+>
+  ›
+</button>
 
 
 </div>
 
 
 
-<!-- =====================================
-     JAVASCRIPT
-===================================== -->
-
 <script>
 
 
-  /* -------------------------------------
-     OCULTAR FOTOS QUE TODAVÍA NO EXISTEN
-  ------------------------------------- */
-
-  document
-    .querySelectorAll('.optional-image')
-    .forEach(image => {
-
-      image.addEventListener(
-        'error',
-        function () {
-          this.style.display = 'none';
-        }
-      );
-
-    });
+/* =====================================
+   CONFIGURACIÓN
+===================================== */
 
 
+/*
+Puedes aumentar estos números
+cuando quieras.
 
-  /* -------------------------------------
-     CARRUSEL DE LA PORTADA
-  ------------------------------------- */
+Por ejemplo:
+100 -> 200
+*/
 
-  const heroSlides =
-    Array.from(
-      document.querySelectorAll('.hero-slide')
+const MAX_PORTADAS = 30;
+
+const MAX_RESTAURANTE = 100;
+
+const MAX_PLATOS = 100;
+
+const MAX_EVENTOS = 100;
+
+
+
+/* =====================================
+   CREAR GALERÍAS AUTOMÁTICAMENTE
+===================================== */
+
+function crearGaleria(
+  prefijo,
+  contenedorId,
+  cantidad,
+  textoAlt
+) {
+
+  const contenedor =
+    document.getElementById(
+      contenedorId
     );
 
-  let availableSlides = [];
 
-  let currentHeroSlide = 0;
+  if (!contenedor) {
+    return;
+  }
 
 
-  function startHeroSlideshow() {
+  for (
+    let i = 1;
+    i <= cantidad;
+    i++
+  ) {
 
-    availableSlides =
-      heroSlides.filter(
-        slide => slide.complete &&
-        slide.naturalWidth > 0
+
+    const imagen =
+      document.createElement(
+        'img'
       );
 
 
-    heroSlides.forEach(
-      slide => {
+    imagen.src =
+      `${prefijo}${i}.jpg`;
 
-        if (!availableSlides.includes(slide)) {
-          slide.style.display = 'none';
-        }
+
+    imagen.alt =
+      `${textoAlt} ${i}`;
+
+
+    imagen.className =
+      'gallery-photo gallery-clickable';
+
+
+    imagen.loading =
+      'lazy';
+
+
+    imagen.addEventListener(
+      'error',
+      function () {
+
+        this.remove();
 
       }
     );
 
 
-    if (availableSlides.length === 0) {
-      return;
-    }
-
-
-    availableSlides[0]
-      .classList
-      .add('active');
-
-
-    if (availableSlides.length === 1) {
-      return;
-    }
-
-
-    setInterval(
-      () => {
-
-        availableSlides[currentHeroSlide]
-          .classList
-          .remove('active');
-
-
-        currentHeroSlide++;
-
-
-        if (
-          currentHeroSlide >=
-          availableSlides.length
-        ) {
-
-          currentHeroSlide = 0;
-
-        }
-
-
-        availableSlides[currentHeroSlide]
-          .classList
-          .add('active');
-
-      },
-
-      5000
-
+    contenedor.appendChild(
+      imagen
     );
+
 
   }
 
+}
 
-  window.addEventListener(
-    'load',
-    startHeroSlideshow
+
+
+crearGaleria(
+  'restaurante',
+  'galeria-restaurante',
+  MAX_RESTAURANTE,
+  'Restaurante Fuegos y Vinos'
+);
+
+
+crearGaleria(
+  'plato',
+  'galeria-platos',
+  MAX_PLATOS,
+  'Plato de Fuegos y Vinos'
+);
+
+
+crearGaleria(
+  'evento',
+  'galeria-eventos',
+  MAX_EVENTOS,
+  'Evento de Fuegos y Vinos'
+);
+
+
+
+/* =====================================
+   PORTADA AUTOMÁTICA
+===================================== */
+
+const heroContainer =
+  document.getElementById(
+    'hero-slideshow'
   );
 
 
+let heroSlides = [];
 
-  /* -------------------------------------
-     GALERÍA AMPLIABLE
-  ------------------------------------- */
-
-  const lightbox =
-    document.getElementById('lightbox');
-
-  const lightboxImage =
-    document.getElementById('lightbox-image');
-
-  const lightboxClose =
-    document.getElementById('lightbox-close');
-
-  const lightboxPrev =
-    document.getElementById('lightbox-prev');
-
-  const lightboxNext =
-    document.getElementById('lightbox-next');
-
-
-  let galleryImages = [];
-
-  let currentGalleryImage = 0;
+let currentHeroSlide = 0;
 
 
 
-  function getAvailableGalleryImages() {
+function cargarPortadas() {
 
-    galleryImages =
-      Array.from(
-        document.querySelectorAll(
-          '.gallery-clickable'
-        )
-      )
-      .filter(
-        image =>
-          image.complete &&
-          image.naturalWidth > 0 &&
-          image.style.display !== 'none'
-      );
+
+  let procesadas = 0;
+
+
+  for (
+    let i = 1;
+    i <= MAX_PORTADAS;
+    i++
+  ) {
+
+
+    const imagen =
+      new Image();
+
+
+    imagen.src =
+      `portada${i}.jpg`;
+
+
+    imagen.className =
+      'hero-slide';
+
+
+    imagen.alt =
+      '';
+
+
+    imagen.onload =
+      function () {
+
+
+        heroContainer.appendChild(
+          imagen
+        );
+
+
+        heroSlides.push(
+          imagen
+        );
+
+
+        procesadas++;
+
+
+        comprobarInicioCarrusel();
+
+
+      };
+
+
+    imagen.onerror =
+      function () {
+
+
+        procesadas++;
+
+
+        comprobarInicioCarrusel();
+
+
+      };
+
 
   }
 
 
 
-  function openLightbox(image) {
-
-    getAvailableGalleryImages();
-
-
-    currentGalleryImage =
-      galleryImages.indexOf(image);
-
-
-    if (currentGalleryImage < 0) {
-      return;
-    }
-
-
-    lightboxImage.src =
-      galleryImages[currentGalleryImage].src;
-
-
-    lightboxImage.alt =
-      galleryImages[currentGalleryImage].alt;
-
-
-    lightbox
-      .classList
-      .add('active');
-
-
-    document.body
-      .classList
-      .add('no-scroll');
-
-  }
-
-
-
-  function closeLightbox() {
-
-    lightbox
-      .classList
-      .remove('active');
-
-
-    document.body
-      .classList
-      .remove('no-scroll');
-
-  }
-
-
-
-  function showNextImage() {
-
-    if (galleryImages.length === 0) {
-      return;
-    }
-
-
-    currentGalleryImage++;
+  function comprobarInicioCarrusel() {
 
 
     if (
-      currentGalleryImage >=
-      galleryImages.length
+      procesadas !==
+      MAX_PORTADAS
     ) {
 
-      currentGalleryImage = 0;
-
-    }
-
-
-    lightboxImage.src =
-      galleryImages[currentGalleryImage].src;
-
-
-    lightboxImage.alt =
-      galleryImages[currentGalleryImage].alt;
-
-  }
-
-
-
-  function showPreviousImage() {
-
-    if (galleryImages.length === 0) {
       return;
-    }
-
-
-    currentGalleryImage--;
-
-
-    if (currentGalleryImage < 0) {
-
-      currentGalleryImage =
-        galleryImages.length - 1;
 
     }
 
 
-    lightboxImage.src =
-      galleryImages[currentGalleryImage].src;
+    if (
+      heroSlides.length === 0
+    ) {
+
+      return;
+
+    }
 
 
-    lightboxImage.alt =
-      galleryImages[currentGalleryImage].alt;
+    /*
+    Ordenamos por número
+    por si las imágenes
+    terminan de cargar
+    en distinto orden.
+    */
 
-  }
+    heroSlides.sort(
+      (a, b) => {
+
+        const numA =
+          parseInt(
+            a.src.match(
+              /portada(\d+)\.jpg/
+            )?.[1] || 0
+          );
 
 
+        const numB =
+          parseInt(
+            b.src.match(
+              /portada(\d+)\.jpg/
+            )?.[1] || 0
+          );
 
-  document
-    .querySelectorAll('.gallery-clickable')
-    .forEach(
-      image => {
 
-        image.addEventListener(
-          'click',
-          () => openLightbox(image)
+        return numA - numB;
+
+      }
+    );
+
+
+    heroSlides.forEach(
+      slide => {
+
+        heroContainer.appendChild(
+          slide
         );
 
       }
     );
 
 
-
-  lightboxClose
-    .addEventListener(
-      'click',
-      closeLightbox
-    );
+    heroSlides[0]
+      .classList
+      .add('active');
 
 
-
-  lightboxNext
-    .addEventListener(
-      'click',
-      showNextImage
-    );
+    if (
+      heroSlides.length > 1
+    ) {
 
 
+      setInterval(
+        cambiarPortada,
+        5000
+      );
 
-  lightboxPrev
-    .addEventListener(
-      'click',
-      showPreviousImage
-    );
-
-
-
-  lightbox.addEventListener(
-    'click',
-    event => {
-
-      if (event.target === lightbox) {
-        closeLightbox();
-      }
 
     }
+
+
+  }
+
+
+}
+
+
+
+function cambiarPortada() {
+
+
+  heroSlides[
+    currentHeroSlide
+  ]
+    .classList
+    .remove('active');
+
+
+  currentHeroSlide++;
+
+
+  if (
+    currentHeroSlide >=
+    heroSlides.length
+  ) {
+
+    currentHeroSlide = 0;
+
+  }
+
+
+  heroSlides[
+    currentHeroSlide
+  ]
+    .classList
+    .add('active');
+
+
+}
+
+
+
+cargarPortadas();
+
+
+
+/* =====================================
+   VISOR DE GALERÍA
+===================================== */
+
+const lightbox =
+  document.getElementById(
+    'lightbox'
   );
 
 
-
-  document.addEventListener(
-    'keydown',
-    event => {
-
-      if (
-        !lightbox
-          .classList
-          .contains('active')
-      ) {
-
-        return;
-
-      }
+const lightboxImage =
+  document.getElementById(
+    'lightbox-image'
+  );
 
 
-      if (event.key === 'Escape') {
-        closeLightbox();
-      }
+const lightboxClose =
+  document.getElementById(
+    'lightbox-close'
+  );
 
 
-      if (event.key === 'ArrowRight') {
-        showNextImage();
-      }
+const lightboxPrev =
+  document.getElementById(
+    'lightbox-prev'
+  );
 
 
-      if (event.key === 'ArrowLeft') {
-        showPreviousImage();
-      }
+const lightboxNext =
+  document.getElementById(
+    'lightbox-next'
+  );
+
+
+let galleryImages = [];
+
+let currentGalleryImage = 0;
+
+
+
+function obtenerImagenesGaleria() {
+
+
+  galleryImages =
+    Array.from(
+      document.querySelectorAll(
+        '.gallery-clickable'
+      )
+    )
+    .filter(
+      imagen =>
+        imagen.complete &&
+        imagen.naturalWidth > 0
+    );
+
+
+}
+
+
+
+function abrirFoto(
+  imagen
+) {
+
+
+  obtenerImagenesGaleria();
+
+
+  currentGalleryImage =
+    galleryImages.indexOf(
+      imagen
+    );
+
+
+  if (
+    currentGalleryImage < 0
+  ) {
+
+    return;
+
+  }
+
+
+  lightboxImage.src =
+    imagen.src;
+
+
+  lightboxImage.alt =
+    imagen.alt;
+
+
+  lightbox
+    .classList
+    .add('active');
+
+
+  document.body
+    .classList
+    .add('no-scroll');
+
+
+}
+
+
+
+function cerrarFoto() {
+
+
+  lightbox
+    .classList
+    .remove('active');
+
+
+  document.body
+    .classList
+    .remove('no-scroll');
+
+
+}
+
+
+
+function fotoSiguiente() {
+
+
+  if (
+    galleryImages.length === 0
+  ) {
+
+    return;
+
+  }
+
+
+  currentGalleryImage++;
+
+
+  if (
+    currentGalleryImage >=
+    galleryImages.length
+  ) {
+
+    currentGalleryImage = 0;
+
+  }
+
+
+  lightboxImage.src =
+    galleryImages[
+      currentGalleryImage
+    ].src;
+
+
+}
+
+
+
+function fotoAnterior() {
+
+
+  if (
+    galleryImages.length === 0
+  ) {
+
+    return;
+
+  }
+
+
+  currentGalleryImage--;
+
+
+  if (
+    currentGalleryImage < 0
+  ) {
+
+    currentGalleryImage =
+      galleryImages.length - 1;
+
+  }
+
+
+  lightboxImage.src =
+    galleryImages[
+      currentGalleryImage
+    ].src;
+
+
+}
+
+
+
+document.addEventListener(
+  'click',
+  event => {
+
+
+    if (
+      event.target
+        .classList
+        .contains(
+          'gallery-clickable'
+        )
+    ) {
+
+
+      abrirFoto(
+        event.target
+      );
+
 
     }
-  );
+
+
+  }
+);
+
+
+
+lightboxClose.addEventListener(
+  'click',
+  cerrarFoto
+);
+
+
+
+lightboxNext.addEventListener(
+  'click',
+  fotoSiguiente
+);
+
+
+
+lightboxPrev.addEventListener(
+  'click',
+  fotoAnterior
+);
+
+
+
+lightbox.addEventListener(
+  'click',
+  event => {
+
+
+    if (
+      event.target ===
+      lightbox
+    ) {
+
+      cerrarFoto();
+
+    }
+
+
+  }
+);
+
+
+
+document.addEventListener(
+  'keydown',
+  event => {
+
+
+    if (
+      !lightbox
+        .classList
+        .contains('active')
+    ) {
+
+      return;
+
+    }
+
+
+    if (
+      event.key ===
+      'Escape'
+    ) {
+
+      cerrarFoto();
+
+    }
+
+
+    if (
+      event.key ===
+      'ArrowRight'
+    ) {
+
+      fotoSiguiente();
+
+    }
+
+
+    if (
+      event.key ===
+      'ArrowLeft'
+    ) {
+
+      fotoAnterior();
+
+    }
+
+
+  }
+);
 
 
 </script>
