@@ -1,2 +1,2 @@
-# fuegosyvinos.githuab.io
+# fuegosyvinos.github.io
 Página web oficial de Fuegos y vinos, Fuenmayor
