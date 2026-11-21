@@ -9,12 +9,24 @@
   <title>Fuegos y Vinos — Web oficial</title>
   <script>
     (() => {
-      const destino = 'https://fuegosyvinos-web.pages.dev' +
-        window.location.pathname + window.location.search + window.location.hash;
-      window.location.replace(destino);
+      const primary = 'https://fuegosyvinos-web.pages.dev';
+      const backup = 'https://fuegos-y-vinos-acceso.exoticechidna1.chatgpt.site';
+      let redirected = false;
+      const controller = new AbortController();
+      const go = origin => {
+        if (redirected) return;
+        redirected = true;
+        clearTimeout(timer);
+        controller.abort();
+        window.location.replace(origin + window.location.pathname + window.location.search + window.location.hash);
+      };
+      const timer = setTimeout(() => go(backup), 2200);
+      fetch(primary + '/cuestionario-control.json', {cache: 'no-store', signal: controller.signal})
+        .then(response => go(response.ok ? primary : backup))
+        .catch(() => go(backup));
     })();
   </script>
-  <noscript><meta http-equiv="refresh" content="0;url=https://fuegosyvinos-web.pages.dev/"></noscript>
+  <noscript><meta http-equiv="refresh" content="0;url=https://fuegos-y-vinos-acceso.exoticechidna1.chatgpt.site/"></noscript>
   <style>
     body {font: 1rem/1.5 system-ui,sans-serif; min-height: 100vh; margin: 0; display: grid; place-items: center; text-align: center; background: #fff; color: #222}
     main {max-width: 36rem; padding: 2rem}
@@ -25,7 +37,7 @@
   <main>
     <h1>Fuegos y Vinos</h1>
     <p>Te estamos llevando a nuestra web oficial.</p>
-    <p><a href="https://fuegosyvinos-web.pages.dev/">Acceder a Fuegos y Vinos</a></p>
+    <p><a href="https://fuegos-y-vinos-acceso.exoticechidna1.chatgpt.site/">Acceder a Fuegos y Vinos</a></p>
   </main>
 </body>
 </html>
